@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
-# Downloads the AI-generated photos into assets/img/photos/ and rewrites the
+# Downloads the remaining AI-generated photos (classroom, first-time, excel, cv and nsfas are already included) into assets/img/photos/ and rewrites the
 # HTML/sitemap to use the local copies instead of the image CDN.
 # Run once from the repo root:  bash scripts/download-images.sh
 set -euo pipefail
 CDN="https://d8j0ntlcm91z4.cloudfront.net/user_3JV4uleisDnfjPxWDEigzoZjHHt/"
 declare -A IMGS=(
-  [classroom]=hf_20260926_125130_cab742f4-e5e0-47f6-91a9-5dfb69205cfe
-  [first-time]=hf_20260926_125216_0af46487-e160-49c7-8f51-c1a892fc5977
-  [excel]=hf_20260926_125216_e2cdcccf-f65b-4228-a088-2543e880b2ff
-  [cv]=hf_20260926_125216_7e4a7ed5-11cf-4974-9058-5f27483f0265
-  [nsfas]=hf_20260926_125216_1683ec9e-e6e0-465c-a689-b8f0b4a8f1a8
   [poster]=hf_20260926_125216_51a10f20-39b2-4c3d-bf39-344d93b96498
   [social-media]=hf_20260926_125216_acf73781-5646-41f3-902a-8734a750a89c
   [powerpoint]=hf_20260926_125216_dae05018-004c-401d-9f7d-161fc2ddcc3b

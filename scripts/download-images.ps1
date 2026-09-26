@@ -1,16 +1,11 @@
 # Windows version of download-images.sh
-# Downloads the 12 website photos into assets\img\photos\ and updates the
+# Downloads the remaining 7 website photos (5 are already included) into assets\img\photos\ and updates the
 # pages to use those local copies. Run from the website folder:
 #   powershell -ExecutionPolicy Bypass -File scripts\download-images.ps1
 $ErrorActionPreference = 'Stop'
 $cdn  = 'https://d8j0ntlcm91z4.cloudfront.net/user_3JV4uleisDnfjPxWDEigzoZjHHt/'
 $site = 'https://www.kasitechhub.co.za'
 $imgs = [ordered]@{
-  'classroom'    = 'hf_20260926_125130_cab742f4-e5e0-47f6-91a9-5dfb69205cfe'
-  'first-time'   = 'hf_20260926_125216_0af46487-e160-49c7-8f51-c1a892fc5977'
-  'excel'        = 'hf_20260926_125216_e2cdcccf-f65b-4228-a088-2543e880b2ff'
-  'cv'           = 'hf_20260926_125216_7e4a7ed5-11cf-4974-9058-5f27483f0265'
-  'nsfas'        = 'hf_20260926_125216_1683ec9e-e6e0-465c-a689-b8f0b4a8f1a8'
   'poster'       = 'hf_20260926_125216_51a10f20-39b2-4c3d-bf39-344d93b96498'
   'social-media' = 'hf_20260926_125216_acf73781-5646-41f3-902a-8734a750a89c'
   'powerpoint'   = 'hf_20260926_125216_dae05018-004c-401d-9f7d-161fc2ddcc3b'
@@ -37,4 +32,4 @@ foreach ($f in Get-ChildItem -Path . -Filter *.html) {
   $lines = [IO.File]::ReadAllLines($f.FullName) | Where-Object { $_ -notmatch 'd8j0ntlcm91z4\.cloudfront\.net' }
   [IO.File]::WriteAllLines($f.FullName, $lines)
 }
-Write-Host 'Done. All 12 photos are in assets\img\photos'
+Write-Host 'Done. All photos are in assets\img\photos'
