@@ -1,5 +1,5 @@
 # Windows version of download-images.sh
-# Downloads the remaining 7 website photos (5 are already included) into assets\img\photos\ and updates the
+# Downloads the remaining 6 website photos (6 are already included) into assets\img\photos\ and updates the
 # pages to use those local copies. Run from the website folder:
 #   powershell -ExecutionPolicy Bypass -File scripts\download-images.ps1
 $ErrorActionPreference = 'Stop'
@@ -11,7 +11,6 @@ $imgs = [ordered]@{
   'powerpoint'   = 'hf_20260926_125216_dae05018-004c-401d-9f7d-161fc2ddcc3b'
   'job-search'   = 'hf_20260926_125216_9ce984f4-3634-44bd-bc05-bc726876c1a0'
   'building'     = 'hf_20260926_125216_9e14f090-a2b2-4d70-9766-797fb8b77fbd'
-  'graduates'    = 'hf_20260926_125243_c3351b5f-0755-4ce2-a9d0-02a6b1ad0cc9'
   'word'         = 'hf_20260926_125216_6c82ff08-cc99-49a5-a837-b574ddd1720a'
 }
 New-Item -ItemType Directory -Force -Path 'assets\img\photos' | Out-Null

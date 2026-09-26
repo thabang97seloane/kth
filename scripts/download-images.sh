@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Downloads the remaining AI-generated photos (classroom, first-time, excel, cv and nsfas are already included) into assets/img/photos/ and rewrites the
+# Downloads the remaining AI-generated photos (classroom, first-time, excel, cv, nsfas and graduates are already included) into assets/img/photos/ and rewrites the
 # HTML/sitemap to use the local copies instead of the image CDN.
 # Run once from the repo root:  bash scripts/download-images.sh
 set -euo pipefail
@@ -10,7 +10,6 @@ declare -A IMGS=(
   [powerpoint]=hf_20260926_125216_dae05018-004c-401d-9f7d-161fc2ddcc3b
   [job-search]=hf_20260926_125216_9ce984f4-3634-44bd-bc05-bc726876c1a0
   [building]=hf_20260926_125216_9e14f090-a2b2-4d70-9766-797fb8b77fbd
-  [graduates]=hf_20260926_125243_c3351b5f-0755-4ce2-a9d0-02a6b1ad0cc9
   [word]=hf_20260926_125216_6c82ff08-cc99-49a5-a837-b574ddd1720a
 )
 mkdir -p assets/img/photos

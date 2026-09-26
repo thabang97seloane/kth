@@ -14,7 +14,7 @@ No build step: plain HTML/CSS/JS, so it runs on any host (GitHub Pages, Netlify,
 
 1. **Domain.** The site assumes `https://www.kasitechhub.co.za`. If your domain is different, replace it everywhere:
    `grep -rl kasitechhub.co.za . | xargs sed -i 's#https://www.kasitechhub.co.za#https://YOUR-DOMAIN#g'`
-2. **Photos.** The photos are AI-generated and hosted on the image generator's CDN. Copy them into the site once (5 of the 12 are already included in `assets/img/photos/`):
+2. **Photos.** The photos are AI-generated and hosted on the image generator's CDN. Copy them into the site once (6 of the 12 are already included in `assets/img/photos/`):
    - **Windows:** open the website folder, click the address bar, type `powershell`, press Enter, then run
      `powershell -ExecutionPolicy Bypass -File scripts\download-images.ps1`
    - **Mac / Linux / Git Bash:** open a terminal in the website folder and run `bash scripts/download-images.sh`
