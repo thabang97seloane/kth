@@ -24,7 +24,7 @@ for name in "${!IMGS[@]}"; do
   curl -fsSL -o "assets/img/photos/$name.webp" "$CDN${id}_min.webp"
   curl -fsSL -o "assets/img/photos/$name.png" "$CDN${id}.png"
   for f in *.html sitemap.xml; do
-    sed -i -e "s#$CDN${id}_min.webp#/assets/img/photos/$name.webp#g" \
+    sed -i -e "s#$CDN${id}_min.webp#assets/img/photos/$name.webp#g" \
            -e "s#$CDN${id}.png#https://www.kasitechhub.co.za/assets/img/photos/$name.png#g" "$f"
   done
   echo "saved $name"

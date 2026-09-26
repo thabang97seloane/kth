@@ -14,8 +14,12 @@ No build step: plain HTML/CSS/JS, so it runs on any host (GitHub Pages, Netlify,
 
 1. **Domain.** The site assumes `https://www.kasitechhub.co.za`. If your domain is different, replace it everywhere:
    `grep -rl kasitechhub.co.za . | xargs sed -i 's#https://www.kasitechhub.co.za#https://YOUR-DOMAIN#g'`
-2. **Photos.** The photos are AI-generated and hosted on the image generator's CDN. Run
-   `bash scripts/download-images.sh` once to copy them into `assets/img/photos/` and point the pages at the local copies, then commit.
+2. **Photos.** The photos are AI-generated and hosted on the image generator's CDN. Copy them into the site once:
+   - **Windows:** open the website folder, click the address bar, type `powershell`, press Enter, then run
+     `powershell -ExecutionPolicy Bypass -File scripts\download-images.ps1`
+   - **Mac / Linux / Git Bash:** open a terminal in the website folder and run `bash scripts/download-images.sh`
+
+   Both scripts save the photos to `assets/img/photos/` and point the pages at those copies.
    Over time, **replace them with real photos** of your classroom, building, trainers and learners (with their permission). Real photos build more trust and help you rank in Google Images and Maps. The building photo in particular shows a made-up sign, so swap it for a photo of the real entrance first.
 3. **Check these details** (they were filled in with sensible defaults, so confirm or edit them):
    - Opening hours: Mon–Fri 08:00–17:00, Sat 08:00–13:00 (topbar, footer, contact page, and `openingHoursSpecification` in the JSON-LD)
